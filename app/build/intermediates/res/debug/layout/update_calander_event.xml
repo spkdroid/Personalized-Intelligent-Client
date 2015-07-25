@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <EditText
+        android:id="@+id/eventname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="event name" >
+        <requestFocus />
+    </EditText>
+    <EditText
+        android:id="@+id/eventdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.31"
+        android:ems="10"
+        android:hint="Add a note about the event"
+        android:inputType="textMultiLine" />
+    <Button
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="event date" />
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select a date" />
+    <Button
+        android:id="@+id/timeevent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a time for the event" />
+    <Button
+        android:id="@+id/update_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+</LinearLayout><!-- From: file:/S:/UbiComp/Client/PersonalizeDay-at-Dal-Client/app/src/main/res/layout/update_calander_event.xml -->
