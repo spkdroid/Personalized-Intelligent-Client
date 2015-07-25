@@ -13,9 +13,8 @@ The Application does not require any external Library to Run the application. Ju
 <h4> Installation </h2>
 How to Build the Application?<br>
 Step 1: Download the entire source code to your local Machine<br>
-Step 2: The application does not require any external library but will require appcompatv7 library for theme<br>
-Step 3: Import the Source code into eclipse IDE<br>
-Step 4: Clean and Run the Project<br>
-
+Step 2: Import the code into the Android Studio<br>
+Step 3: Build the Project
+Step 4: Launch the apk
 
 **** This is Just the Prototype Full Working Copy Code will be updated Soon
