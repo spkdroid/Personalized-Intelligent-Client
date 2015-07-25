@@ -15,6 +15,6 @@ How to Build the Application?<br>
 Step 1: Download the entire source code to your local Machine<br>
 Step 2: Import the code into the Android Studio<br>
 Step 3: Build the Project
-Step 4: Launch the apk
+
 
 **** This is Just the Prototype Full Working Copy Code will be updated Soon
