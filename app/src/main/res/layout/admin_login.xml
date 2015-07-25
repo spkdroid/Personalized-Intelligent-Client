@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/evnetname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventname" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department" />
+
+    <Spinner
+        android:id="@+id/departmentlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/shoes" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="28dp"
+            android:text="Select Time" />
+
+        <Button
+            android:id="@+id/selecttimebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/time"
+            android:layout_alignBottom="@+id/time"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:text="Time" />
+
+        <Button
+            android:id="@+id/calendarselectbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/selecttimebutton"
+            android:layout_below="@+id/selecttimebutton"
+            android:layout_marginTop="18dp"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/calendarselectbutton"
+            android:layout_alignBottom="@+id/calendarselectbutton"
+            android:layout_alignLeft="@+id/time"
+            android:text="Select Date" />
+
+        <Spinner
+            android:id="@+id/venuelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/venue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:entries="@array/venue" />
+
+        <TextView
+            android:id="@+id/venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/calendarselectbutton"
+            android:layout_centerVertical="true"
+            android:text="venue" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/addDesctiption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/venue"
+            android:layout_alignTop="@+id/next"
+            android:text="Add Description" />
+    </RelativeLayout>
+
+</LinearLayout>

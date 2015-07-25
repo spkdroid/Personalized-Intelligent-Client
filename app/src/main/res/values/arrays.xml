@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="shoes">
+        <item>Faculty of Computer Science</item>
+        <item>DISA</item>
+        <item>Computer Science Graduate Society</item>
+        <item>Dalhousie Law School</item>
+        <item>Dalhousie Medical School</item>
+        <item>Dalhousie Chemistry Department</item>
+    </string-array>
+    <string-array name="venue">
+        <item>Goldberg Computer Science Building Atrium</item>
+        <item>Henrty Hicks Building Room No 304</item>
+        <item>Dalhousie Sexton Campus</item>
+        <item>Rowe Building</item>
+    </string-array>
+    <string-array name="cat">
+        <item>Athletics, Varsity &amp; Club</item>
+        <item>Admissions</item>
+        <item>Alumni Events</item>
+        <item>Athletics, Recreation &amp; Fitness</item>
+        <item>Career Services</item>
+        <item>Community Interest</item>
+        <item>Concerts, Performances &amp; Arts</item>
+        <item>Conferences</item>
+        <item>Exhibits and Displays</item>
+        <item>Health and Wellness</item>
+        <item>Lectures, Seminars</item>
+        <item>Meetings</item>
+        <item>Movies &amp; Film</item>
+        <item>Religious &amp; Spiritual</item>
+        <item>Special Events</item>
+        <item>Training &amp; Professional Development</item>
+        <item>Workshops</item>
+    </string-array>
+
+</resources>

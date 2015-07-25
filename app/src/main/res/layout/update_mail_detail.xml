@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mailheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personalized Gmail Information"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/gmailusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Gmail UserName"
+        >
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/gmailpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:hint="Gmail Password"
+        />
+
+    <Button
+        android:id="@+id/gupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update GMail Details" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</LinearLayout>
