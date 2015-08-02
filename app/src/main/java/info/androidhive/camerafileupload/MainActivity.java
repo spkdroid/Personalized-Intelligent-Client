@@ -33,6 +33,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * Filename : MainActivity.java
+ * <p/>
+ * <p/>
+ * This is used to call the default camera of the mobile phone.
+ * <p/>
+ * The class file will link the camera and will convert them into byte and will
+ * <p/>
+ * prepare the image to transfer them to the server
+ */
 public class MainActivity extends Activity {
 
     // LogCat tag
@@ -101,7 +111,7 @@ public class MainActivity extends Activity {
 
     /**
      * Checking device has camera hardware or not
-     * */
+     */
     private boolean isDeviceSupportCamera() {
         if (getApplicationContext().getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA)) {
@@ -169,7 +179,7 @@ public class MainActivity extends Activity {
 
     /**
      * Receiving activity result method will be called after closing the camera
-     * */
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // if the result is capturing Image

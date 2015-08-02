@@ -48,6 +48,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+/**
+ * Filename: UploadActivity.java
+ * <p/>
+ * This class file will run a background thread that will redirect the
+ * <p/>
+ * byte to the server.
+ * <p/>
+ * when the transfer is completed to the server a alert message is shown.
+ * <p/>
+ * Based on the image size and the internet strength the upload may vary in the performance.
+ */
+
 public class UploadActivity extends Activity {
     // LogCat tag
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -105,7 +117,7 @@ public class UploadActivity extends Activity {
 
     /**
      * Displaying captured image/video on the screen
-     * */
+     */
     private void previewMedia(boolean isImage) {
         // Checking whether captured media is image or video
         if (isImage) {
@@ -132,7 +144,7 @@ public class UploadActivity extends Activity {
 
     /**
      * Uploading the file to server
-     * */
+     */
     private class UploadFileToServer extends AsyncTask<Void, Integer, String> {
         @Override
         protected void onPreExecute() {
@@ -225,7 +237,7 @@ public class UploadActivity extends Activity {
 
     /**
      * Method to show alert dialog
-     * */
+     */
     private void showAlert(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message).setTitle("Response from Servers")

@@ -56,10 +56,14 @@ public class AddCalanderInfo extends Activity implements OnClickListener {
     private int month = 02;
     private int day = 28;
     private String sysdate;
+    // Edit text to read the message name and the content that need to be shown
     EditText event_name, event_message;
+    // Button that are in the page
     Button event_date, event_time, event_update;
+
     TextView date_txt;
     ProgressDialog status;
+
     static String dal_id, dal_event_name, dal_event_msg, dal_event_date, dal_event_time;
     static String r;
 
@@ -109,6 +113,8 @@ public class AddCalanderInfo extends Activity implements OnClickListener {
         }
     };
 
+
+    // when the value is less than 10 and 0 is appended to the digit
     private static String pad(int c) {
         if (c >= 10)
             return String.valueOf(c);
@@ -116,6 +122,7 @@ public class AddCalanderInfo extends Activity implements OnClickListener {
             return "0" + String.valueOf(c);
     }
 
+    // Back button to kill the page
     public void onBackPressed() {
         finish();
     }
@@ -146,103 +153,105 @@ public class AddCalanderInfo extends Activity implements OnClickListener {
 
         if (v == event_update) {
 
-           final String name= event_name.getText().toString().replace("","%20");
-           final String time=event_time.getText().toString().replace(" ", "%20");
-            final String date=date_txt.getText().toString().replace(" ", "%20");
-            final String msg=event_message.getText().toString().replace(" ", "%20");
+            // Reading the value from the edit text and storing it a string
+            final String name = event_name.getText().toString().replace("", "%20");
+            final String time = event_time.getText().toString().replace(" ", "%20");
+            final String date = date_txt.getText().toString().replace(" ", "%20");
+            final String msg = event_message.getText().toString().replace(" ", "%20");
 
-                /**
-                 *
-                 * An updation process done in the background.
-                 *
-                 * One the update process is complete the application will post an success
-                 *
-                 * message and redirect to the menu screen.
-                 *
-                 */
+            /**
+             *
+             * An updation process done in the background.
+             *
+             * One the update process is complete the application will post an success
+             *
+             * message and redirect to the menu screen.
+             *
+             */
 
-                new AsyncTask<Void, Void, Void>() {
-                    @Override
-                    protected void onPreExecute() {
-                        status = new ProgressDialog(AddCalanderInfo.this);
-                        status.setMessage("Please wait...");
-                        status.setCancelable(false);
-                        status.show();
+            new AsyncTask<Void, Void, Void>() {
+                @Override
+                protected void onPreExecute() {
+                    status = new ProgressDialog(AddCalanderInfo.this);
+                    status.setMessage("Please wait...");
+                    status.setCancelable(false);
+                    status.show();
                 }
 
-                    @Override
-                    protected Void doInBackground(Void... params) {
-                        // TODO Auto-generated method stub
-                        String URL = "http://www.spkdroid.com/merlin/eventupdate.php?dal_id=" + r + "&event_name=" + name+ "&event_date=" + date + "&event_time=" + time + "&event_msg=" + msg;
-                        HttpClient httpclient = new DefaultHttpClient();
-                        HttpResponse response = null;
+                // Request is constructed over here
+                @Override
+                protected Void doInBackground(Void... params) {
+                    // TODO Auto-generated method stub
+                    String URL = "http://www.spkdroid.com/merlin/eventupdate.php?dal_id=" + r + "&event_name=" + name + "&event_date=" + date + "&event_time=" + time + "&event_msg=" + msg;
+                    HttpClient httpclient = new DefaultHttpClient();
+                    HttpResponse response = null;
+                    try {
+                        response = httpclient.execute(new HttpGet(URL));
+                    } catch (ClientProtocolException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    StatusLine statusLine = response.getStatusLine();
+                    if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+                        ByteArrayOutputStream out = new ByteArrayOutputStream();
                         try {
-                            response = httpclient.execute(new HttpGet(URL));
-                        } catch (ClientProtocolException e) {
+                            response.getEntity().writeTo(out);
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        String responseString = out.toString();
+                        try {
+                            out.close();
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        //..more logic
+                    } else {
+                        //Closes the connection.
+                        try {
+                            response.getEntity().getContent().close();
+                        } catch (IllegalStateException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         } catch (IOException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
-                        StatusLine statusLine = response.getStatusLine();
-                        if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-                            ByteArrayOutputStream out = new ByteArrayOutputStream();
-                            try {
-                                response.getEntity().writeTo(out);
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                            String responseString = out.toString();
-                            try {
-                                out.close();
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                            //..more logic
-                        } else {
-                            //Closes the connection.
-                            try {
-                                response.getEntity().getContent().close();
-                            } catch (IllegalStateException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                            try {
-                                throw new IOException(statusLine.getReasonPhrase());
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
+                        try {
+                            throw new IOException(statusLine.getReasonPhrase());
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
                         }
-
-                        return null;
                     }
 
-                    @Override
-                    protected void onPostExecute(Void result) {
-                        super.onPostExecute(result);
-                        // Dismiss the progress dialog
-                        status.dismiss();
-                        new AlertDialog.Builder(AddCalanderInfo.this)
-                                .setTitle("You Details Added to Calander")
-                                .setMessage("The Event that you have made the update has been added to the Calander.You can now view about the detail in the Kiosk!!!")
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // continue with delete
-                                        finish();
-                                    }
-                                }).show();
-                    }
-                }.execute();
-            } else {
-                Toast.makeText(getApplicationContext(), "Input Field Missing", Toast.LENGTH_LONG).show();
-            }
+                    return null;
+                }
+
+                // when the process is completed the
+                @Override
+                protected void onPostExecute(Void result) {
+                    super.onPostExecute(result);
+                    // Dismiss the progress dialog
+                    status.dismiss();
+                    new AlertDialog.Builder(AddCalanderInfo.this)
+                            .setTitle("You Details Added to Calander")
+                            .setMessage("The Event that you have made the update has been added to the Calander.You can now view about the detail in the Kiosk!!!")
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // continue with delete
+                                    finish();
+                                }
+                            }).show();
+                }
+            }.execute();
+        } else {
+            Toast.makeText(getApplicationContext(), "Input Field Missing", Toast.LENGTH_LONG).show();
         }
-
+    }
 }

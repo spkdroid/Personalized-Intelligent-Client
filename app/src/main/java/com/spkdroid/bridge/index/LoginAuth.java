@@ -36,6 +36,17 @@ public class LoginAuth extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index_bridge);
         File file = new File(Environment.getExternalStorageDirectory() + "/dayatdal.txt");
+
+        // One time Login Logic has been Implemented
+
+        // The application will check for the dayatdal.txt file in the memory card
+
+        // if the authentication is done the dayatdal.txt file would have been created
+
+        // if the file is missing then it will redirect to the MainActivity.java which is the login module
+
+        // which will ask for the authentication process
+
         if (file.exists()) {
             finish();
             Intent i = new Intent(this, Index.class);
@@ -49,7 +60,7 @@ public class LoginAuth extends Activity {
     }
 
 	/*
-	 * 
+     *
 	 * Read Function is used to fetch the Username from the text file.
 	 * 
 	 */

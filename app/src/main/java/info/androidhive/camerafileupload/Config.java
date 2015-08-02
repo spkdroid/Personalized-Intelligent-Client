@@ -12,6 +12,17 @@
 
 package info.androidhive.camerafileupload;
 
+/**
+ * File Name: Config.java
+ * <p/>
+ * This file is used to locate the server address and the local directory where the image is stored
+ * <p/>
+ * the FILE_UPLOAD_URL contain the server location
+ * <p/>
+ * the IMAGE_DIRECTOR_NAME contain the folder name where the image stored in the
+ * external folder.
+ */
+
 public class Config {
     // File upload url (replace the ip with your server address)
     public static final String FILE_UPLOAD_URL = "http://www.spkdroid.com/merlin/fileUpload.php";

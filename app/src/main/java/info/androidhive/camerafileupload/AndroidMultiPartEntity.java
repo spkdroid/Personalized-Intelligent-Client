@@ -21,6 +21,17 @@ import java.nio.charset.Charset;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
 
+/**
+ * Filename: AndroidMultiPartEntity.java
+ * <p/>
+ * This is the class file that is used to conver the image into byte stream
+ * <p/>
+ * The image is converted as stream and then it is sent to the server.
+ * <p/>
+ * The Server will read the byte stream and reconstruct the file in the
+ * <p/>
+ * server and the kiosk
+ */
 @SuppressWarnings("deprecation")
 public class AndroidMultiPartEntity extends MultipartEntity
 
