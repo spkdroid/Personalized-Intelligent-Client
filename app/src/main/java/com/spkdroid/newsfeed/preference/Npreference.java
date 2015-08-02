@@ -11,8 +11,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.dal.dalevents.admin.AddDescription;
-import com.spkdroid.calander.event.AddCalanderInfo;
 import com.spkdroid.dayatdalclient.R;
 
 import android.app.Activity;

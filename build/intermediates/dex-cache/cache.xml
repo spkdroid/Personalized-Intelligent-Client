@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\classes-317f613fcb318aed139af7651157930b6853e29f.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\classes-33e1c99a727d114fe831ecf56ca99c795443ffc7.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\libs\volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="04b23f428af24a3b67bb50f584349e24d39c775a">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\volley-a3e9f94ef530b30a4224f5e588c17b09bd80181e.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\libs\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f3cf3b25e14d3bca47773e95aa85ea8fefbf8e81">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6-71ecb321537e6cb2dbbd7fa2dde115a18021d7a9.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-9d36e1e06e2bc2a66608a53e4a970e0f7adf056f.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\libs\httpcore-4.3.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\httpcore-4.3.3-6cc6f9002f4c75c2f3e339d1dab26838ae64473e.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\libs\httpmime-4.3.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66a39a5e37d5da40fdad6176fc24ef4316e74702">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\httpmime-4.3.6-a4ac6be157fabde3833374fa4388b7691483929a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramkumar Velmurugan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-a5d25c8fe7398afcb97d500d69479a8a225c5830.jar" />
+    </item>
+    <item
+        jar="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\libs\commons-io-2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="S:\UbiComp\Client\PersonalizeDay-at-Dal-Client\app\build\intermediates\pre-dexed\debug\commons-io-2.4-d0bcd73d7f3106fd5489b21ec0fd6ade136b38c7.jar" />
+    </item>
+
+</items>

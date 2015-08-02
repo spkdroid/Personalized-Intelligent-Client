@@ -14,7 +14,6 @@ import java.util.Set;
 import java.util.UUID;
 
 import com.spkdroid.calander.event.AddCalanderInfo;
-import com.spkdroid.mail.info.UpdateMailDetail;
 import com.spkdroid.newsfeed.preference.Npreference;
 
 import android.app.Activity;
@@ -241,12 +240,6 @@ public class Index extends Activity implements OnClickListener {
 		if(id == R.id.ucalinfo)
 		{
 			Intent i=new Intent(getApplicationContext(),AddCalanderInfo.class);
-			startActivity(i);
-			return true;
-		}
-		if(id == R.id.ugmail)
-		{
-			Intent i=new Intent(getApplicationContext(),UpdateMailDetail.class);
 			startActivity(i);
 			return true;
 		}

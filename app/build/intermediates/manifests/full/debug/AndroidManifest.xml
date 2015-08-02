@@ -32,10 +32,6 @@
             android:label="@string/title_activity_index" >
         </activity>
         <activity
-            android:name="com.spkdroid.dayatdalclient.NewUserAdd"
-            android:label="@string/title_activity_new_user_add" >
-        </activity>
-        <activity
             android:name="com.spkdroid.dayatdalclient.AddUser"
             android:label="@string/title_activity_add_user" >
         </activity>
@@ -50,10 +46,6 @@
         </activity>
         <activity
             android:name="com.spkdroid.calander.event.AddCalanderInfo"
-            android:label="@string/title_activity_add_user" >
-        </activity>
-        <activity
-            android:name="com.spkdroid.mail.info.UpdateMailDetail"
             android:label="@string/title_activity_add_user" >
         </activity>
         <activity

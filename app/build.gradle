@@ -4,6 +4,12 @@ android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
 
+    packagingOptions{
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
     defaultConfig {
         applicationId "com.spkdroid.dayatdalclient"
         minSdkVersion 14

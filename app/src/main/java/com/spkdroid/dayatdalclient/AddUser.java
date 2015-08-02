@@ -9,6 +9,8 @@ package com.spkdroid.dayatdalclient;
  *  
  *  This particular activity will be reading the username,password,emailid and dalid from the user and makes
  *  an entry into the system
+ *
+ *  This class file is used as a Signup module.
  * 
  * 
  */

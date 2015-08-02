@@ -30,6 +30,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ *  Filename : MainActivity.java
+ *
+ *  This is the first screen in the client application
+ *
+ *
+ *  the user can login into the system or just can sign up
+ *
+ *  Once the Authentication is done this page will not be fired again
+ *
+ *
+ */
 public class MainActivity extends Activity implements OnClickListener {
 
 	Button LoginButton,NewUser;

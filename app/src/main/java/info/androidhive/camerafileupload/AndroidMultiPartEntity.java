@@ -1,23 +1,16 @@
 
 /*****************************************************************
- * 
  * Author: Ravi Tamada
- * 
+ * <p/>
  * This Code is adapted from the tutorial of the following link
- * 
+ * <p/>
  * given below.
- * 
+ * <p/>
  * http://www.androidhive.info/2014/12/android-uploading-camera-image-video-to-server-with-progress-bar/
- * 
- * 
- * 
  ******************************************************************/
 
 
-
 package info.androidhive.camerafileupload;
-
-
 
 
 import java.io.FilterOutputStream;
@@ -33,56 +26,56 @@ public class AndroidMultiPartEntity extends MultipartEntity
 
 {
 
-	private final ProgressListener listener;
+    private final ProgressListener listener;
 
-	public AndroidMultiPartEntity(final ProgressListener listener) {
-		super();
-		this.listener = listener;
-	}
+    public AndroidMultiPartEntity(final ProgressListener listener) {
+        super();
+        this.listener = listener;
+    }
 
-	public AndroidMultiPartEntity(final HttpMultipartMode mode,
-			final ProgressListener listener) {
-		super(mode);
-		this.listener = listener;
-	}
+    public AndroidMultiPartEntity(final HttpMultipartMode mode,
+                                  final ProgressListener listener) {
+        super(mode);
+        this.listener = listener;
+    }
 
-	public AndroidMultiPartEntity(HttpMultipartMode mode, final String boundary,
-			final Charset charset, final ProgressListener listener) {
-		super(mode, boundary, charset);
-		this.listener = listener;
-	}
+    public AndroidMultiPartEntity(HttpMultipartMode mode, final String boundary,
+                                  final Charset charset, final ProgressListener listener) {
+        super(mode, boundary, charset);
+        this.listener = listener;
+    }
 
-	@Override
-	public void writeTo(final OutputStream outstream) throws IOException {
-		super.writeTo(new CountingOutputStream(outstream, this.listener));
-	}
+    @Override
+    public void writeTo(final OutputStream outstream) throws IOException {
+        super.writeTo(new CountingOutputStream(outstream, this.listener));
+    }
 
-	public static interface ProgressListener {
-		void transferred(long num);
-	}
+    public static interface ProgressListener {
+        void transferred(long num);
+    }
 
-	public static class CountingOutputStream extends FilterOutputStream {
+    public static class CountingOutputStream extends FilterOutputStream {
 
-		private final ProgressListener listener;
-		private long transferred;
+        private final ProgressListener listener;
+        private long transferred;
 
-		public CountingOutputStream(final OutputStream out,
-				final ProgressListener listener) {
-			super(out);
-			this.listener = listener;
-			this.transferred = 0;
-		}
+        public CountingOutputStream(final OutputStream out,
+                                    final ProgressListener listener) {
+            super(out);
+            this.listener = listener;
+            this.transferred = 0;
+        }
 
-		public void write(byte[] b, int off, int len) throws IOException {
-			out.write(b, off, len);
-			this.transferred += len;
-			this.listener.transferred(this.transferred);
-		}
+        public void write(byte[] b, int off, int len) throws IOException {
+            out.write(b, off, len);
+            this.transferred += len;
+            this.listener.transferred(this.transferred);
+        }
 
-		public void write(int b) throws IOException {
-			out.write(b);
-			this.transferred++;
-			this.listener.transferred(this.transferred);
-		}
-	}
+        public void write(int b) throws IOException {
+            out.write(b);
+            this.transferred++;
+            this.listener.transferred(this.transferred);
+        }
+    }
 }
